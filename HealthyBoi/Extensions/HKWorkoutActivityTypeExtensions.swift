@@ -10,6 +10,23 @@ import Foundation
 import HealthKit
 
 extension HKWorkoutActivityType {
+  
+  var quantityTypeIdentifier: HKQuantityTypeIdentifier? {
+    switch self {
+    case .running, .walking, .hiking:
+        return .distanceWalkingRunning
+      case .cycling:
+        return .distanceCycling
+      case .swimming:
+        return .distanceSwimming
+      case .downhillSkiing, .snowboarding:
+        return .distanceDownhillSnowSports
+      case .wheelchairRunPace, .wheelchairWalkPace:
+        return .distanceWheelchair
+      default:
+        return nil
+    }
+  }
 
   static var allTypes: [HKWorkoutActivityType] {
     return [

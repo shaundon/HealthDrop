@@ -16,14 +16,16 @@ struct SyncWithHealthKitView: View {
   @State private var inProgress = false
 
   var body: some View {
-    VStack(spacing: 20.0) {
+    VStack(spacing: 20) {
       Text("\(Image(systemName: "heart.fill")) HealthDrop")
         .font(.system(.largeTitle, design: .rounded))
         .fontWeight(.bold)
         .padding()
-        .foregroundColor(.white)
-        .background(Color.accentColor)
+        .foregroundColor(.accentColor)
         .cornerRadius(12.0)
+      Text("HealthDrop is a utility for adding workouts to your iPhone's Apple Health database.")
+        .font(.subheadline)
+        .multilineTextAlignment(.center)
         .padding(.bottom)
       Text("To get started, connect to Apple Health.").font(.headline)
       Button(action: {
@@ -39,6 +41,8 @@ struct SyncWithHealthKitView: View {
           Text("Connect to Apple Health")
         }
       }
+      .buttonStyle(.borderedProminent)
+      .buttonBorderShape(.capsule)
     }
   }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,9 @@
 		600B493A2561A54C00259A22 /* HealthKitUnknownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B49392561A54C00259A22 /* HealthKitUnknownView.swift */; };
 		600B493D2561A77A00259A22 /* AddDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B493C2561A77A00259A22 /* AddDataView.swift */; };
 		609C03EA2561F78100D4FFCA /* HKUnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609C03E92561F78000D4FFCA /* HKUnitExtensions.swift */; };
+		60FB26472854F7DE009BC00F /* JSONImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB26462854F7DE009BC00F /* JSONImportView.swift */; };
+		60FB264A2854FBE4009BC00F /* FilePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 60FB26492854FBE4009BC00F /* FilePicker */; };
+		60FEF7F72867CC990045BF28 /* WorkoutRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FEF7F62867CC990045BF28 /* WorkoutRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,8 @@
 		600B49392561A54C00259A22 /* HealthKitUnknownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitUnknownView.swift; sourceTree = "<group>"; };
 		600B493C2561A77A00259A22 /* AddDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataView.swift; sourceTree = "<group>"; };
 		609C03E92561F78000D4FFCA /* HKUnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUnitExtensions.swift; sourceTree = "<group>"; };
+		60FB26462854F7DE009BC00F /* JSONImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONImportView.swift; sourceTree = "<group>"; };
+		60FEF7F62867CC990045BF28 /* WorkoutRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60FB264A2854FBE4009BC00F /* FilePicker in Frameworks */,
 				600B4927255F51F700259A22 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +122,7 @@
 				600B4936256199FE00259A22 /* SyncWithHealthKitView.swift */,
 				600B49392561A54C00259A22 /* HealthKitUnknownView.swift */,
 				600B493C2561A77A00259A22 /* AddDataView.swift */,
+				60FB26462854F7DE009BC00F /* JSONImportView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				600B4932256198BA00259A22 /* HealthKitUtilities.swift */,
+				60FEF7F62867CC990045BF28 /* WorkoutRepresentation.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -144,6 +152,9 @@
 			dependencies = (
 			);
 			name = HealthyBoi;
+			packageProductDependencies = (
+				60FB26492854FBE4009BC00F /* FilePicker */,
+			);
 			productName = HealthyBoi;
 			productReference = 600B4910255F519E00259A22 /* HealthyBoi.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +182,9 @@
 				Base,
 			);
 			mainGroup = 600B4907255F519E00259A22;
+			packageReferences = (
+				60FB26482854FBE4009BC00F /* XCRemoteSwiftPackageReference "FilePicker" */,
+			);
 			productRefGroup = 600B4911255F519E00259A22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -198,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				600B4937256199FE00259A22 /* SyncWithHealthKitView.swift in Sources */,
+				60FB26472854F7DE009BC00F /* JSONImportView.swift in Sources */,
 				600B4933256198BA00259A22 /* HealthKitUtilities.swift in Sources */,
 				600B493D2561A77A00259A22 /* AddDataView.swift in Sources */,
 				600B492A255F533800259A22 /* NewWorkoutView.swift in Sources */,
@@ -205,6 +220,7 @@
 				600B492E255F55EC00259A22 /* HKWorkoutActivityTypeExtensions.swift in Sources */,
 				600B4916255F519E00259A22 /* ContentView.swift in Sources */,
 				600B4914255F519E00259A22 /* HealthyBoiApp.swift in Sources */,
+				60FEF7F72867CC990045BF28 /* WorkoutRepresentation.swift in Sources */,
 				609C03EA2561F78100D4FFCA /* HKUnitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +355,7 @@
 				DEVELOPMENT_TEAM = WZLXWEEH2U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HealthyBoi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,7 +378,7 @@
 				DEVELOPMENT_TEAM = WZLXWEEH2U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HealthyBoi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +412,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		60FB26482854FBE4009BC00F /* XCRemoteSwiftPackageReference "FilePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markrenaud/FilePicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		60FB26492854FBE4009BC00F /* FilePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60FB26482854FBE4009BC00F /* XCRemoteSwiftPackageReference "FilePicker" */;
+			productName = FilePicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 600B4908255F519E00259A22 /* Project object */;
 }

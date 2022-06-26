@@ -11,10 +11,12 @@ struct AddDataView: View {
     var body: some View {
       List {
         NavigationLink(destination: NewWorkoutView()) {
-          HStack {
-            Image(systemName: "figure.walk")
-            Text("Add a workout")
-          }
+          Label("Add a workout manually", systemImage: "plus.circle.fill")
+            .symbolRenderingMode(.multicolor)
+        }
+        NavigationLink(destination: JSONImportView()) {
+          Label("Import workout from JSON", systemImage: "folder.badge.plus")
+            .symbolRenderingMode(.multicolor)
         }
       }
       .listStyle(InsetGroupedListStyle())
